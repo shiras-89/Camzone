@@ -1,0 +1,2800 @@
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<!-- Basic page needs -->
+	<meta charset="utf-8">
+	<!--[if IE]>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <![endif]-->
+
+	  
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="keywords" content="Computer, Notebook, Laptop price in sri lanka, laptops, computer parts, computer accessories,    Laptop Charger, Laptop Cooling Pad, Laptop accessories, notebook pc, fax machine, laptop parts, hsdpa modems, Desktop, hard disk, pen drive, keyboards, Scanner, optical drivers, printers, processors, ram, software, speakers & sub woofers, ups systems, VGA Card, sound & tv cards, motherboards, multimedia Projector, LCD tv, Digital Camera, Laptop Battery, Laptop Adapter, HP laptop, hp computer, Acer, Dell, Ibm, Toshiba, Sony Vaio, Laptop Keyboard, Microsoft Software, Mobile Phone, Laptop Bag, cartridge, Kingston, transcend, Samsung, View Sonic, Intel, Canon, Epson, Linksys, cisco, hp Compaq, hp pro book, mini laptop, Pavilion, unity plaza, technocity, cctv camera, stand alone dvr, blu ray, full HD, security systems, USB, Best Price, foxconn, lenova, Maxtor, Prolink, nokia, optoma, khtmlersky, XP, vista, dlink, A4 tech, Apple, AMD, msi, LG,Laptop,camzone.lk,LapTop retailer,technical,  IT market, IT, quality Computer, quality Laptop, quality parts, MP3, MP4 & I-Pod Players,Laptop Cooling Pad,Unity Plaza, Colombo 04, Sri Lanka,Best Laptops,hp laptops,computer accessory,Buy Hp Laptop,Desktops Distributor in sri lanka, Other Brand, LG, HP, Targus, Kingston, Transcend, Maxtor, Prestigio, Locks, Aztech, Hitachi, Super Talent, JWD, DIGITA, IPOD, A4 TECH, Prolink, Foxconn, Intel, Microsoft, Techno PC, US Robotics, Khtmlersky, D-Link, Canon, TP-LINK, View Sonic, LCD Panel, All Brands, BenQ, Sharp,Huawei, Linksys By Cisco, Ezy, Powerlogic,Laptop Hard Disk, Laptop Ram, Laptop Lock, Laptop TV Cards, Laptop Skins, Laptop Mouse, Laptop Car Charger, Laptop LCD Panel, Desktop Computer Hard Disk, Memory Cards, Digital Camera, Web Camera, LCD Monitors,  Card Reader All in One, Computer Tool Kit, UPS, Computer Motherboards, Processor, Computer Optical Drives, Computer Casing, Routers, Network Products, Printer, Mobile Phones, Desktop Computer Ram, External Hard Disk, PEN Drive, LCD TV, LCD TV Wall Mount Bracket, HSDPA Modem, Projector, Flexible Keyboard, Headset, HP Cartridge, Desktop Computer, Bluetooth Handsfree, Security Camera System, Keyboard & Mouse, Sri Lanka, Unity Plaza, camzone.lk, laptop repairs, "/>
+	<meta name="description" content="Camzone (Pvt) Ltd is a Sri Lankan Largest CCTV equipments, Laptops, Best price for laptop sale, Personal Computer, & Computer Accessories Store and Sri Lanka IT on single hub."/>
+	<title>Camzone (pvt) ltd. - Home page</title>
+
+	<!-- Mobile specific metas  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon  -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Dosis:400,300,200,500,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- CSS Style -->
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<!-- font-awesome & simple line icons CSS -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/simple-line-icons.css" media="all">
+
+	<!-- owl.carousel CSS -->
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+
+	<!-- animate CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
+
+	<!-- flexslider CSS -->
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css" >
+
+	<!-- jquery-ui.min CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+	<!-- Revolution Slider CSS -->
+	<link href="css/revolution-slider.css" rel="stylesheet">
+
+	<!-- style CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+	<SCRIPT LANGUAGE="JavaScript">
+
+iMaxCount = ""
+bMaxItem = ""
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function checks whether the entered qty is correct or not.
+//  @   Pages Affected  : Index,Items, searchresult,Psearchresult
+//  @		Function Name		: preproc(frm,index,code,type)									
+//	@		Input Parameters: frm = Form Name, index = Index value, code = Item Code, type = Item Type
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function preproc(frm,index,code,type,eqCode,iWishList, iUnits)
+{ var element, retval, qty, iItemqty, iTotalqty;
+
+	element = "document." + frm + ".qty" + index + ".value";
+	qty = eval(element);
+	retval=IsNumeric(qty)
+	
+	if(retval == 1)
+	{
+		alert(getMessage("iValidQuantity"));
+		eval("document." + frm + ".qty" + index + ".value=iUnits");
+		eval("document." + frm + ".qty" + index + ".focus()");
+		return;
+	}
+	
+	
+	if (iWishList == 0){
+		iItemqty = qty*1
+		if ((iMaxCount != "") && (bMaxItem.toLowerCase()=="true")){
+			iTotalqty = parseInt(0)
+			if((iItemqty + iTotalqty)>parseInt(iMaxCount)){
+				alert(getMessage("iTotalQtyExceed") +" "+ iMaxCount);
+				eval("document." + frm + ".qty" + index + ".value=iUnits");
+				//eval("document." + frm + ".qty" + index + ".focus()");
+				return;
+			}
+		}
+	document.frmAdditem.qty.value = qty;
+	document.frmAdditem.ic.value = code;
+	document.frmAdditem.type.value=type;
+	document.frmAdditem.EqCode.value=eqCode;
+	document.frmAdditem.action = "https://www.camzone.lk/includes/add_item.html?Tp="
+	document.frmAdditem.submit();
+	}
+	else{
+	document.frmAdditem.qty.value = qty;
+	document.frmAdditem.ic.value = code;
+	document.frmAdditem.EqCode.value=eqCode;
+	document.frmAdditem.action = "https://www.camzone.lk/includes/AddWishitem.html?Tp="
+	document.frmAdditem.submit();
+	}
+}
+// End of the function preproc(frm,index,code,type)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function gets the selected matrix attributes from the select box
+//  @                      and checks whether the particular combination is present or not.
+//  @   Pages Affected  : Items
+//  @		Function Name		: getattribute(frm,index,code,type)									
+//	@		Input Parameters: frm = Form Name, index = Index value, code = Item Code, type = Item Type
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function getattribute(frm,index,code,type)
+{ var iIndex,matrix,arrTemp,strselected,len;
+	iItemCount=index
+	matrix = false;
+	arrTemp = eval("arrSelItems" + iItemCount)
+	strselected = eval("document.frmAdd.SelMatrixAtt1" + iItemCount + ".options[document.frmAdd.SelMatrixAtt1" + iItemCount + ".selectedIndex].value"); 
+	strselected = strselected + eval("document.frmAdd.SelMatrixAtt2" + iItemCount + ".options[document.frmAdd.SelMatrixAtt2" + iItemCount + ".selectedIndex].value"); 
+	
+	len = document.frmAdd.elements.length;
+	for(iCount=0;iCount<=parseInt(len)-1;iCount++){
+		if((document.frmAdd.elements[iCount].name.substring(0,13) == "SelMatrixAtt3") && (document.frmAdd.elements[iCount].name.substring(13,14) == iItemCount))
+			strselected = strselected + eval("document.frmAdd.SelMatrixAtt3" + iItemCount + ".options[document.frmAdd.SelMatrixAtt3" + iItemCount + ".selectedIndex].value"); 
+	}		
+	for(iIndex=0;iIndex<=arrTemp.length-1;iIndex++){
+		if(arrTemp[iIndex][1]==strselected){
+			code = arrTemp[iIndex][0];
+			matrix = true;
+			break;
+		}
+	}
+	if(matrix){
+		preproc(frm,index,code,type,"",0)
+		return;
+	}
+	else{
+		alert(getMessage("iMatrixCombNotPresent"));
+		return;
+	}
+}
+// End of the function getattribute(frm,index,code,type)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function checks whether the attributes are unique 
+//  @   Pages Affected  : Itemmatrix
+//  @		Function Name		: attribCheck()
+//	@		Input Parameters: iAttrib3 = (returns 1 if 3rd attribute is present, else returns 0)
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+		function attribCheck(iAttrib3){
+			var sAttrib1,sAttrib2,sAttrib3;
+			sAttrib1=document.frmMatrix.Attrib1.options[document.frmMatrix.Attrib1.selectedIndex].value;
+			sAttrib2=document.frmMatrix.Attrib2.options[document.frmMatrix.Attrib2.selectedIndex].value;
+			if(sAttrib1==sAttrib2){
+				alert(getMessage("iUniqueAttributes"));
+				return false;
+			}
+			if(iAttrib3=="1"){
+				sAttrib3=document.frmMatrix.Attrib3.options[document.frmMatrix.Attrib3.selectedIndex].value;
+				if((sAttrib3==sAttrib1)||(sAttrib3==sAttrib2)){
+					alert(getMessage("iUniqueAttributes"));
+					return false;
+				}
+			}
+			document.frmMatrix.submit();
+		}
+// End of the function attribCheck(iAttrib3)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function gets the selected matrix Items 
+//  @   Pages Affected  : Itemmatrix
+//  @		Function Name		: multiselect()
+//	@		Input Parameters: type = Item type(matrix Item),attribcode3=attribcode3
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function multiselect(type,attribcode3)
+{ 
+	var len, iIndex, attributes, qty, code, quantity, retval, attribute_codes,iTotalqty,iItemqty;
+
+	iTotalqty=0;
+	iItemqty=0;
+	qty = "";
+	code = "";
+	attributes = "";
+	attribute_codes = "";
+		
+	len = document.frmAdd.elements.length;
+	for(iIndex=0;iIndex<=parseInt(len)-1;iIndex++){	
+		if(document.frmAdd.elements[iIndex].type == "checkbox"){
+			if(document.frmAdd.elements[iIndex].checked){
+				arr = document.frmAdd.elements[iIndex].value.split("*");
+				quantity = eval("document.frmAdd.qty" + arr[0] + ".value")
+				retval=IsNumeric(quantity)
+				if(retval == 1){
+					alert(getMessage("iValidQuantity"));
+					eval("document.frmAdd.qty" + arr[0] + ".value=1");
+					eval("document.frmAdd.qty" + arr[0] + ".focus()");
+					return;
+				}
+				qty = qty + quantity + "*";
+				code = arr[1];
+				attributes = attributes + arr[2] + "*";
+				iItemqty=iItemqty+parseInt(quantity);
+							
+			}	  
+		}	
+	}
+	if(code == ""){
+		alert(getMessage("iSelectItems"));
+		return;
+	}
+
+	if ((iMaxCount != "") && (bMaxItem.toLowerCase()=="true")){
+		iTotalqty = parseInt(0)
+		if((iItemqty + iTotalqty)>parseInt(iMaxCount)){
+			alert(getMessage("iTotalQtyExceed") + " " + iMaxCount);
+			return;
+		}
+	}
+	attribute_codes = attribute_codes + (document.frmMatrix.Attrib1.selectedIndex + 1) + "*";
+	attribute_codes = attribute_codes + (document.frmMatrix.Attrib2.selectedIndex + 1) + "*";
+	if(attribcode3 != "") 
+		attribute_codes = attribute_codes + (document.frmMatrix.Attrib3.selectedIndex + 1);
+	else
+		attribute_codes = attribute_codes + "";
+		
+	document.frmAdditem.qty.value = qty;
+	document.frmAdditem.ic.value = code;
+  document.frmAdditem.type.value=type;
+  document.frmAdditem.attributes.value = attributes;
+  document.frmAdditem.attribute_codes.value = attribute_codes;
+  document.frmAdditem.submit();
+}
+// End of the function multiselect(type)
+
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: Function IsNumeric checks whether the entered value is a 
+//	@											numeric and greater than Zero
+//  @		Function Name		: IsNumeric(value)									
+//	@		Input Parameters: value to be tested
+//	@		Return Value		: 0 - Success	  1 - Failure			
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function IsNumeric(value)
+{
+	var validate=/(^\d+$)/
+	if ((validate.test(value)) && (value > 0))
+		return 0; 
+	else
+		return 1; 
+}
+// End of the function IsNumeric(value)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function used to format the contents in the field.
+//	@		                	If value is 100.0 , this funciton will change it to 100.00.
+//	@		Pages Affected  : Shipcalculator.html
+//  @		Function Name		: setFormat(field)									
+//	@		Input Parameters: field = name of the form and fieldto be formatted
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function setFormat(field){
+		var i, idiff,strval;
+		var m_Field = eval("document." + field);
+  	if(m_Field.value.indexOf(".") < 0)
+			m_Field.value = m_Field.value + ".00";
+		if(m_Field.value.length-m_Field.value.indexOf(".") == 2)
+			m_Field.value = m_Field.value + "0";
+		else if(m_Field.value.length-m_Field.value.indexOf(".") > 3){
+			m_Field.value=m_Field.value.substring(0,m_Field.value.indexOf(".") +3)		
+		}
+		
+	  idiff=10-m_Field.value.length	
+		strval=""
+		for(i=0;i< 10;i++)	{
+			strval=strval+ " "  
+			if (i==idiff-1){
+				strval=strval+m_Field.value;
+				break;
+			}
+		}
+		m_Field.value=strval;
+}
+
+// End of the function setFormat(field)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function used to format numbers.
+//	@		                	If we pass 100 , this funciton will return 100.00.
+//	@	  Pages Affected  : Shipcalculator.html
+//  @		Function Name		: formatValue(value)									
+//	@		Input Parameters: value = then number to be formatted
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+function formatValue(value){
+	return Math.round(value*100)/100;
+}
+// End of the function formatValue(value)
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is for submitting the form automatically when user  
+//	@											selects a subcategory from list-box.
+//  @   Pages Affected  : items, itemdesc
+//  @		Function Name		: submitlist()									
+//	@		Input Parameters: null
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+function submitlist(sBc)
+{
+	var value,sCatText;
+	value=document.frmList.lstSubCategory.options[document.frmList.lstSubCategory.selectedIndex].value;
+	sCatText=document.frmList.lstSubCategory.options[document.frmList.lstSubCategory.selectedIndex].text;
+	if(value != "0")
+	{
+		document.frmList.action = "https://www.camzone.lk/items.html?Cc=" + value + "&CatName=" + sCatText + "&Bc="+sBc+"&BrandName="+"&Tp=&iTpStatus=1";
+		document.frmList.submit();
+	}
+}
+// End of the function submitlist()
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called to choose the Catalog from the list.
+//  @   Pages Affected  : PowerSearch
+//  @		Function Name		: ChangeCatalog()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function ChangeCatalog()
+{
+  strURL = "https://www.camzone.lk/powersearch.html?Tp=" + document.frmPSearch.shop.options[document.frmPSearch.shop.selectedIndex].value;
+  window.location.href = strURL;
+}
+// End of the function ChangeCatalog()
+	
+	
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function checks	whether the entered qty is correct or not.
+//  @                   : If any related items is checked then it is passed thru hidden 
+//  @                   : field called chkitems with ',' as seperator
+//  @   Pages Affected  : Itemdesc
+//  @		Function Name		: preprocess()									
+//	@		Input Parameters: Value to be tested									
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+function preprocess(iWishList, iUnits){ 
+	var retval, iItemqty, iTotalqty, qty, iIndex, iRelatedQty;
+	qty=document.frmAdd.qty.value;
+	retval=IsNumeric(qty);
+	iRelatedQty = 0;
+	if(retval == 1)	{
+		alert(getMessage("iValidQuantity"));
+		document.frmAdd.qty.value=iUnits;
+		document.frmAdd.qty.focus();
+		return;
+	}
+	
+	if (iWishList == 0){
+		iItemqty = qty*1
+		if ((iMaxCount != "") && (bMaxItem.toLowerCase()=="true")){
+			iTotalqty = parseInt(0)
+			if (document.frmRelated){
+				if(document.frmRelated.chkItems.length > 1){
+					for (iIndex = 0; iIndex < document.frmRelated.chkItems.length; iIndex++){
+						if (document.frmRelated.chkItems[iIndex].checked){
+							iRelatedQty =  iRelatedQty + parseInt(document.frmRelated.chkItems[iIndex].value.split(",")[1]);
+						}
+					}
+				}
+				else{
+					if (document.frmRelated.chkItems.checked){
+						iRelatedQty =  parseInt(document.frmRelated.chkItems.value.split(",")[1]);
+					}
+				}
+			}
+			if((iItemqty + iTotalqty + iRelatedQty)>parseInt(iMaxCount)){
+				alert(getMessage("iTotalQtyExceed") + " " + iMaxCount);
+				document.frmAdd.qty.value=iUnits;
+				document.frmAdd.qty.focus();
+				return;
+			}
+		}
+		for (count=0;count<document.forms.length;count++){
+				if (document.forms[count].name=="frmRelated"){	
+					var sItemList="";
+					for(index=0;index<(document.frmRelated.elements.length);index++) {
+						if(document.frmRelated.elements[index].checked){
+							sItemList+=document.frmRelated.elements[index].value + "," ;
+							iItemqty++;				
+						}
+					}
+					sItemList = sItemList.substring(0,sItemList.length-1)
+					document.frmAdd.chkItems.value = sItemList;
+				}
+		}
+		document.frmAdd.submit();
+	}
+	else{
+		document.frmAdd.action = "https://www.camzone.lk/includes/AddWishitem.html?Tp="
+		document.frmAdd.submit();
+	}
+}
+// End of the function preprocess()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is used to submit the upgrade items form.
+//  @   Pages Affected  : Itemdesc
+//  @		Function Name		: UpgradeBuy(itemcode)									
+//	@		Input Parameters: itemcode = Item Code									
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function UpgradeBuy(itemcode,iUnits, supg_meascode)
+{   
+	iTotalqty = parseInt(0)
+	if ((iMaxCount != "") && (bMaxItem.toLowerCase()=="true")){
+		if(iTotalqty >= parseInt(iMaxCount)){
+			alert(getMessage("iTotalQtyExceed") + " " + iMaxCount);
+			return;
+		}
+	}
+	document.frmUpgrade.ic.value = itemcode;
+	document.frmUpgrade.qty.value = iUnits;	
+	if (typeof supg_meascode == "undefined")
+		document.frmUpgrade.upg_meascode.value="";
+	else	
+		document.frmUpgrade.upg_meascode.value=supg_meascode; 
+	document.frmUpgrade.submit();
+}
+// End of the function UpgradeBuy(itemcode)
+
+	
+	
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is used to delete a particular item from cart.
+//  @   Pages Affected  : Viewcart
+//  @		Function Name		: DeleteFromCart(itemcode, itemtype, tpcode)									
+//	@		Input Parameters: itemcode = Item Code, itemtype = Item Type, tpcode = TpCode									
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function DeleteFromCart(itemcode, itemtype, tpcode, eqCode, MeasCode)
+{
+	if(confirm(getMessage("iRemoveItemFromCart")))
+	{
+	document.frmDelete.itemcode.value = itemcode;
+	document.frmDelete.itemtype.value = itemtype;
+	document.frmDelete.tpcode.value = tpcode;
+	document.frmDelete.EqCode.value = eqCode;
+	if (typeof MeasCode == "undefined")
+		document.frmDelete.MeasCode.Value = "";
+	else		 
+		document.frmDelete.MeasCode.Value = MeasCode;
+	document.frmDelete.submit();
+	}
+}
+// End of the function DeleteFromCart(itemcode, itemtype, tpcode)
+
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is used to empty the cart.
+//  @   Pages Affected  : Viewcart
+//  @		Function Name		: EmptyCart()									
+//	@		Input Parameters: Null									
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function EmptyCart()
+{
+	if(confirm(getMessage("iEmptyCart")))
+	{
+	document.frmDelete.todo.value = "empty";
+	document.frmDelete.submit();
+	}
+}
+// End of the function EmptyCart()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is used to update the cart contents, as changed 
+//	@											by the user.
+//  @   Pages Affected  : Viewcart
+//  @		Function Name		: UpdateCart(Index)									
+//	@		Input Parameters: Index = Total no. of items									
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+function UpdateCart(Index)
+{
+	var count,qty,retval,iItemqty;
+	iItemqty=0
+	
+	for(count = 1;count<=Index;count++)
+	{		
+		qty = eval("document.frmCartContents.qty" + count + ".value")
+		var validate=/(^\d+$)/
+		if (validate.test(qty) == false)
+		{
+			alert(getMessage("iValidQuantity"));
+			eval("document.frmCartContents.qty" + count + ".focus()");
+			return;
+		}
+		qty=qty*1
+		iItemqty=iItemqty+qty
+	}
+	if ((iMaxCount != "") && (bMaxItem.toLowerCase()=="true")){
+		if(iItemqty > parseInt(iMaxCount)){
+			alert(getMessage("iTotalQtyExceed") + " " + iMaxCount);
+			return;
+		}
+	}
+	document.frmCartContents.submit();
+}
+// End of the function UpdateCart(Index)
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called whenever user clicks prev or next navigation.
+//  @   Pages Affected  : pSearchresult
+//  @		Function Name		: submitSearch(iPageNo)									
+//	@		Input Parameters: iPageNo	= PageNo								
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function submitSearch(iPageNo){	
+	document.frmPSearch.PageNo.value= iPageNo;
+	document.frmPSearch.submit();
+}
+// End of the function submitSearch(iPageNo)
+
+
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called before submiting page, to validate
+//	@											the min & max price.
+//  @   Pages Affected  : PowerSearch
+//  @		Function Name		: PowerSearchVal()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function PowerSearchVal(sCustTypeInt, sCustTypeDate){
+	var len,iIndex,bCriteria,fMinval,fMaxval,value ;
+	
+	var validate=/(^\d+$)/
+	
+	//The hidden variables are being reset to blank when user comes back to page using back button.
+	document.frmPSearch.sManDesc.value  = "";
+	document.frmPSearch.sBrandDesc.value = "";
+	document.frmPSearch.sCatDesc.value  =  "";
+	
+	if(sCustTypeInt!=""){
+		sCustTypeInt = sCustTypeInt.substring(0,sCustTypeInt.length-1) 
+		arr = sCustTypeInt.split(",");
+		for(iIndex=0;iIndex<=arr.length-1;iIndex++){
+			objField=eval("document.frmPSearch." + arr[iIndex]) 
+			if(objField.value!=""){
+				if(!(validate.test(objField.value)))  {
+						alert(getMessage("iValidInteger"));
+						objField.focus();
+						objField.select();
+						return false;
+				}
+			}	
+		}	
+	}
+	if(sCustTypeDate!=""){
+		sCustTypeDate = sCustTypeDate.substring(0,sCustTypeDate.length-1) 
+		arr = sCustTypeDate.split(",");
+		for(iIndex=0;iIndex<=arr.length-1;iIndex++){
+			smonth=eval("document.frmPSearch." + arr[iIndex]+ "month.options[document.frmPSearch." + arr[iIndex]+ "month.selectedIndex].value")
+			sday=eval("document.frmPSearch." + arr[iIndex]+ "day.options[document.frmPSearch." + arr[iIndex]+ "day.selectedIndex].value")
+			syear=eval("document.frmPSearch." + arr[iIndex]+ "year.options[document.frmPSearch." + arr[iIndex]+ "year.selectedIndex].value")
+			var sdate=new Date(syear, smonth ,sday)
+			var sDefaultDate=new Date(1995,1,1)
+			if((sdate-sDefaultDate)!=0)
+				eval("document.frmPSearch.Txt" + arr[iIndex] + ".value=smonth+'/'+sday+'/'+syear")
+			else
+				eval("document.frmPSearch.Txt" + arr[iIndex] + ".value=''")
+		}
+	}
+	
+	bCriteria=false;
+	len = document.frmPSearch.elements.length;
+	for(iIndex=0;iIndex<=parseInt(len)-1;iIndex++){	
+		if(document.frmPSearch.elements[iIndex].type == "text"){
+			if(document.frmPSearch.elements[iIndex].value != ""){
+				if(document.frmPSearch.elements[iIndex].value.charAt(0)==" "){
+					alert(getMessage("iSearchNoStartSpace"));
+					document.frmPSearch.elements[iIndex].focus();
+					return false;
+				}
+				bCriteria = true;
+			}
+		}
+		
+		if(document.frmPSearch.elements[iIndex].type == "hidden"){
+			if(document.frmPSearch.elements[iIndex].value != "")
+				bCriteria = true;
+		}
+		if(document.frmPSearch.elements[iIndex].type == "checkbox"){
+			if(document.frmPSearch.elements[iIndex].checked)
+				bCriteria = true;
+		}
+		sFldname=document.frmPSearch.elements[iIndex].name
+		if((sFldname == "selCategory")||(sFldname == "selBrand")||(sFldname == "selManufacturer")){
+			if(document.frmPSearch.elements[iIndex].options[document.frmPSearch.elements[iIndex].selectedIndex].value != "")
+				bCriteria = true;
+		}
+		if(bCriteria) break;
+	}
+	
+	if(! bCriteria)	{
+		alert(getMessage("iEnterSearchText"));
+		document.frmPSearch.txtKey.focus();
+		return false;
+	}
+	
+	fMinval=document.frmPSearch.txtMin.value
+	fMaxval=document.frmPSearch.txtMax.value
+	
+	if(document.frmPSearch.txtMin.value.length > 0)
+	{ 
+		 retval=IsFloat(fMinval);
+		
+		if(! retval)
+		{
+				alert(getMessage("iValidPrice"));
+				document.frmPSearch.txtMin.focus();
+				document.frmPSearch.txtMin.select();
+				return false;
+		}
+		
+			fMinval=parseFloat(fMinval);
+		
+		
+	}
+	if(document.frmPSearch.txtMax.value.length > 0)
+	{   
+	  
+		 retval=IsFloat(fMaxval);
+		if(! retval)
+		{
+			alert(getMessage("iValidPrice"));
+			document.frmPSearch.txtMax.focus();
+			document.frmPSearch.txtMax.select();
+			return false;
+		}
+		
+			fMaxval=parseFloat(fMaxval);
+	
+		
+	}
+	if(fMaxval < fMinval)
+	{
+		alert(getMessage("iMaxPriceGTMinPrice"));
+		document.frmPSearch.txtMax.focus();
+		document.frmPSearch.txtMax.select();
+		return false;
+		
+	}
+	document.frmPSearch.sManDesc.value  = document.frmPSearch.selManufacturer.options[document.frmPSearch.selManufacturer.selectedIndex].text;
+	document.frmPSearch.sBrandDesc.value = document.frmPSearch.selBrand.options[document.frmPSearch.selBrand.selectedIndex].text;
+	document.frmPSearch.sCatDesc.value  =  document.frmPSearch.selCategory.options[document.frmPSearch.selCategory.selectedIndex].text;
+	document.frmPSearch.submit();
+	
+}
+
+// End of the function powersearchval()
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called before submiting page, to validate
+//	@											float value.
+//  @   Pages Affected  : PowerSearch
+//  @		Function Name		: IsFloat()									
+//	@		Input Parameters: price value(Minimum or Maximum)							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+function IsFloat(value)
+{
+	var pattern1 = /^(\d+)(\.){0,1}(\d*)$/
+	var pattern2 = /^(\d*)(\.){0,1}(\d+)$/
+	return pattern1.test(value) || pattern2.test(value);
+}
+
+// End of the function IsFloat()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called when Delete or Retrieve link is clicked.
+//	@											It is used to change the action depending on the link clicked.
+//  @   Pages Affected  : Retreivecart
+//  @		Function Name		: RetrieveCart(getcart,todo)									
+//	@		Input Parameters: getcart = cartid,todo = 1(Delete) or 0(Retrieve)							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function RetrieveCart(getcart,todo)
+{
+	if(todo=="1")
+		if(confirm(getMessage("iDelSavedCart")))
+			document.frmRetrieveCart.action = "https://www.camzone.lk/retrievecart.html?action=DEL";
+		else
+			return;
+	else
+		document.frmRetrieveCart.action = "https://www.camzone.lk/retrievecart.html?action=RET";
+	document.frmRetrieveCart.PrevCartID.value =  getcart;
+	document.frmRetrieveCart.submit();
+}
+// End of the function RetrieveCart(getcart,todo)
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called when New cart name and Email id is entered.
+//	@											It validates the Name and the Email id.
+//  @   Pages Affected  : SaveCart
+//  @		Function Name		: SaveCart()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function SaveCart(){
+	if (document.frmSaveCart.CARTNAME.value == ""){
+    	alert(getMessage("iEnterCartName"));
+		document.frmSaveCart.CARTNAME.focus();
+		return;
+	}
+	if (document.frmSaveCart.CARTNAME.value.charAt(0)==" "){
+		alert(getMessage("iCartSpaces"));
+		document.frmSaveCart.CARTNAME.focus();
+		return;
+	}
+	if(document.frmSaveCart.CARTNAME.value.indexOf('"')!=-1)
+	 {
+		alert(getMessage("iInvalidCartname"));
+		document.frmSaveCart.CARTNAME.focus();
+		return;
+	 }
+	document.frmSaveCart.action = "https://www.camzone.lk/savecart.html?action=SN&saved=1"
+	document.frmSaveCart.submit();
+}
+// End of the function SaveCart()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@	Description		:	This function is called when New cart name and Email id is entered.
+//	@						It validates the Name and the Email id.
+//  @   Pages Affected  :	SaveEmail()
+//  @	Function Name	:	SaveEmail()									
+//	@	Input Parameters:	null
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function SaveEmail(){
+	
+	// ### Validating email.
+	ret_val = IsEmail(document.frmSaveEmail.EMAIL.value);
+	if (ret_val == 1){
+		document.frmSaveEmail.EMAIL.focus();
+		document.frmSaveEmail.EMAIL.select();
+		return;
+	}
+	
+	document.frmSaveEmail.action = "https://www.camzone.lk/EmailidReq.html"
+	document.frmSaveEmail.submit();
+}
+// End of the function SaveEmail()
+
+
+
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called when when existing cart name is selected.
+//  @   Pages Affected  : SaveCart
+//  @		Function Name		: RestoreCart()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function RestoreCart()
+{
+	if (document.frmSaveCart.CARTLIST.options[document.frmSaveCart.CARTLIST.selectedIndex].value == 0 )	{
+		alert(getMessage("iChooseCartName"));
+		document.frmSaveCart.CARTLIST.focus();
+	}	
+	else	{	
+		document.frmSaveCart.action = "https://www.camzone.lk/savecart.html?action=SE&saved=1"
+		document.frmSaveCart.submit();
+	}
+}
+// End of the function RestoreCart()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called to validate the zipcode.
+//  @   Pages Affected  : ShipCalculator
+//  @		Function Name		: ZipCode_validate()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function ZipCode_validate(bUseDestZone)
+{	
+	var retval;
+	// ### Validating address type
+	if (document.frmShip.RESI.options[document.frmShip.RESI.selectedIndex].value == 0)
+	{
+		alert(getMessage("iAddressType"));
+		document.frmShip.RESI.focus();
+		return false;
+	}
+	if(document.frmShip.zipcode.value != ""){	
+		if(bUseDestZone.toUpperCase() !="TRUE") {
+			retval=IsNumeric(document.frmShip.zipcode.value)
+			if(retval == 1)	{
+				alert(getMessage("iValidZipCode"));
+				document.frmShip.zipcode.focus();
+				document.frmShip.zipcode.select();
+				return false;
+			}
+		}
+	}
+	if((bUseDestZone.toUpperCase()=="FALSE") && (document.frmShip.zipcode.value == ""))	
+		alert(getMessage("iEnterZipCode"));
+			
+	if(bUseDestZone.toUpperCase()=="TRUE"){
+		// ### Validating City
+		if((document.frmShip.City.value != "") && (document.frmShip.City.value.charAt(0)==" ") ){
+				alert(getMessage("iValidText"))
+				document.frmShip.City.focus();
+				document.frmShip.City.select();
+				return false;
+		}
+		// ### Validating State/ Province
+		if((document.frmShip.State.value != "") && (document.frmShip.State.value.charAt(0)==" " )){	
+				alert(getMessage("iValidText"))
+				document.frmShip.State.focus();
+				document.frmShip.State.select();
+				return false;
+		}
+	}	
+	document.frmShip.submit();
+}
+// End of the function ZipCode_validate()
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function is called when a shipping method is selected.
+//  @		Pages Affected  : ShipCalculator
+//  @		Function Name		: ShipCharge_Calculate()									
+//	@		Input Parameters: null							
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function ShipCharge_Calculate(iLocale)
+{	var iTotal, iCartTotal,i, iRadselValue
+	if(iLocale==null)
+		iLocale=1033;
+	
+	for(i=0;i<=document.frmCost.radsel.length-1;i++){
+	
+  	 if(document.frmCost.radsel[i].checked)
+	  { 
+	   iRadselValue=document.frmCost.radsel[i].value.split("*")
+	   
+	  
+	   iRadselValue[0]=getEnglishLocale(iRadselValue[0],iLocale)
+
+	        iRadselValue[0] = formatValue(parseFloat(iRadselValue[0]));
+  			iCartTotal=0
+  			
+			iCartTotal=getEnglishLocale(iCartTotal,iLocale)
+   			iTotal = parseFloat(iRadselValue[0]) + parseFloat(iCartTotal);
+   			
+			document.frmCost.total.value = formatValue(iTotal);
+			setFormat("frmCost.total");
+			document.frmCost.total.value = getCurrentLocale(document.frmCost.total.value,iLocale);
+			document.frmCost.shipprice.value = iRadselValue[0] 
+			setFormat("frmCost.shipprice");
+			document.frmCost.shipprice.value = getCurrentLocale(document.frmCost.shipprice.value,iLocale);
+			
+		
+		break;
+		
+		}
+	}
+}
+// End of the function ShipCharge_Calculate()
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: Function is to validate the alphanumeric characters and  string.  
+//  @  		Pages Affected 		: Shipcalculator
+//  @		Function Name		: isAlphanumeric(str,cSpace)
+//	@		Input Parameters	: formname = name of the form
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function isAlphanumeric(str,cSpace){
+    var sSpacepat = /^(((\w+)[\s,\-*\.]*)+)$/
+     var sPat = /^(((\w+)[*,\-\.]*)+)$/
+     if (cSpace=="1"){
+		if(!(sSpacepat.test(str)))
+		   {
+			 alert(getMessage("iValidText"));
+			 return false;
+	       }	
+		}
+	  else{
+		
+		if(!(sPat.test(str)))  
+			{
+				alert(getMessage("iValidText"));
+				return false;
+	        }
+	        }
+     return true;
+}
+// End of the function isAlphanumeric(str,cSpace)
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: This function changes the no. of days dynamically according to  
+//  @											the month and the year.
+//	@	  Pages Affected  : powersearch.html
+//  @		Function Name		: DateValidate(which)									
+//	@		Input Parameters: which = field
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function DateValidate(which)
+{
+	var sel = eval("document.frmPSearch." + which + "day.selectedIndex");
+	var i=eval("document.frmPSearch." + which + "month.options[document.frmPSearch." + which + "month.selectedIndex].value");
+	var j=eval("document.frmPSearch." + which + "year.options[document.frmPSearch." + which + "year.selectedIndex].value");
+	var k;
+	if(i=="1" || i=="3" || i=="5" || i=="7" || i=="8" || i=="10" || i=="12")
+	{
+		eval("document.frmPSearch." + which + "day.length=31");
+		for(k=28;k<=30;k++)
+		{
+			eval("document.frmPSearch." + which + "day.options[" + k + "].value=" + parseInt(k+1));
+			eval("document.frmPSearch." + which + "day.options[" + k + "].text=" + parseInt(k+1));
+		}
+	}
+	if(i=="4" || i=="6" || i=="9" || i=="11")
+	{
+		eval("document.frmPSearch." + which + "day.length=30");
+		for(k=28;k<=29;k++)
+		{
+			eval("document.frmPSearch." + which + "day.options[" + k + "].value=" + parseInt(k+1));
+			eval("document.frmPSearch." + which + "day.options[" + k + "].text=" + parseInt(k+1));
+		}
+	}
+	var mydate = new Date();
+	if(i==2)
+	{
+		mydate.setDate(1);
+		mydate.setYear(j);
+		mydate.setMonth(1);
+		mydate.setDate(31);
+		var k=31-mydate.getDate();
+		eval("document.frmPSearch." + which + "day.length=" + k);
+		if((k==29) || (k==28))
+		{
+			eval("document.frmPSearch." + which + "day.options[" + (k-1) + "].value=" + k);
+			eval("document.frmPSearch." + which + "day.options[" + (k-1) + "].text=" + k);
+		}
+	}
+	
+	if((sel+1) > eval("document.frmPSearch." + which + "day.length"))
+	{
+		eval("document.frmPSearch." + which + "day.selectedIndex=document.frmPSearch." + which + "day.length-1");
+	}
+}
+// End of the function DateValidate(which)
+
+
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//	@		Description			: Validation for EMail									@
+//  @		Function Name		: IsEmail()												@
+//	@		Input Parameters	: Value to be tested									@
+//	@		Return Value		: 0 - Success											@
+//	@							  1 - Failure											@
+//	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+function IsEmail(strEmail)
+{
+var intReturn =1;
+var emailPat=/^(.+)@(.+)$/
+var specialChars="\\(\\)<>'@,;:\\\\\\\"\\.\\[\\]'"
+var validChars="\[^\\s" + specialChars + "\]"
+var quotedUser="(\"[^\"]*\")"
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/
+var atom=validChars + '+'
+var word="(" + atom + "|" + quotedUser + ")"
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$")
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$")
+var matchArray=strEmail.match(emailPat)
+	if (matchArray==null ) {
+		alert(getMessage("iValidEmail"));
+		return intReturn;
+	}
+var user=matchArray[1]
+var domain=matchArray[2]
+if (user.match(userPat)==null) {
+    alert(getMessage("iValidEmail"));
+    return intReturn;
+}
+	var IPArray=domain.match(ipDomainPat)
+	if (IPArray!=null) {
+		// this is an IP address
+		for (var i=1;i<=4;i++) {
+			if (IPArray[i]>255) {
+				alert(getMessage("iValidEmail"));
+			return intReturn;
+			}
+		}
+		intReturn=0;
+		return intReturn;
+	}
+var domainArray=domain.match(domainPat)
+if (domainArray==null) {
+	alert(getMessage("iValidEmail"));
+    return intReturn;
+}
+	var atomPat=new RegExp(atom,"g")
+	var domArr=domain.match(atomPat)
+	if (domArr[domArr.length-1].length<2 || 
+		domArr[domArr.length-1].length>4) {
+	alert(getMessage("iValidEmail"));
+	return intReturn;
+	}
+var len=domArr.length	
+if (len<2) {
+   var errStr = getMessage("iValidEmail");
+   alert(errStr)
+   return intReturn;
+}
+intReturn=0;
+return intReturn;
+}
+//	End of the function IsEmail(strEmail)
+
+</SCRIPT>
+
+	</head>
+
+<!--<body class="cms-index-index cms-home-page">--> <!-- to show category menu auto open -->
+<body class="cms-index-index">
+
+
+
+				<!-- mobile menu -->
+					<div id="mobile-menu">
+  <ul>
+    <li><a href="index.html" class="home1">Home</a>
+    	
+    </li>
+    
+    <li><a href="contact.html?url=CT">Contact us</a></li>
+    <li><a href="about_us.html">About us</a></li>
+    
+    <li><a href="AtoZdisplay.html?Type=03&TpData=">All Brands</a>
+    
+          </ul>
+        </li>
+        <li> <a href="#">Dresses</a>
+          <ul>
+            <li> <a href="shop_grid.html">Casual Dresses</a> </li>
+            <li> <a href="shop_grid.html">Evening</a> </li>
+            <li> <a href="shop_grid.html">Designer</a> </li>
+            <li> <a href="shop_grid.html">Party</a> </li>
+          </ul>
+        </li>
+        <li> <a href="#">Swimwear</a>
+          <ul>
+            <li> <a href="shop_grid.html">Swimsuits</a> </li>
+            <li> <a href="shop_grid.html">Beach Clothing</a> </li>
+            <li> <a href="shop_grid.html">Clothing</a> </li>
+            <li> <a href="shop_grid.html">Bikinis</a> </li>
+          </ul>
+        </li>
+      </ul>
+      -->
+    </li>
+    <li><a href="AtoZdisplay.html?Type=01&TpData=">All Categories</a>
+    
+    </li>
+    <li>
+
+	
+			<a title="My Account" href="https://www.camzone.lk/acclogin.html?url=AL">Login</a>
+		
+
+    </a>
+    
+    </li>
+  </ul>
+
+</div>
+				<!-- end mobile menu -->
+
+				<!-- Header -->
+					
+<script Language = "Javascript">
+function submitMainsearch()
+{
+	if (document.frmMainsearch.SearchWord.value.indexOf(" ") == 0)
+	{
+		alert("Search string should not start with spaces.");
+		document.frmMainsearch.SearchWord.focus();
+		return false;
+	}
+	if (document.frmMainsearch.SearchWord.value == "")
+	{
+		alert("Please enter a search string.");
+		document.frmMainsearch.SearchWord.focus();
+		return false;
+	}
+
+	document.frmMainsearch.submit();
+	return true;
+}
+</script>
+
+
+<div id="page">  <!-- this div is closed in footer-->
+  <header>
+    <div class="header-container">
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+			<div class="col-lg-8 col-sm-5 hidden-xs">
+				<!-- Default Welcome Message -->
+				<div class="welcome-msg ">Welcome
+				
+				to Camzone (PVT) Ltd.</div>
+				<span class="phone hidden-sm">Call Us: +0117510512 (Sales), +0117418539 (Technical Support)</span>
+			</div>
+
+            <!-- top links -->
+			<div class="headerlinkmenu col-lg-4 col-md-7 col-sm-7 col-xs-12">
+				<div class="links">
+
+				<div class="myaccount">
+                <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+					
+						<a title="My Account" href="https://www.camzone.lk/accinfo.html?url=AI"><i class="fa fa-user"></i><span class="hidden-xs">My Account</span></a>
+					
+				</div>
+
+				
+					<div class="wishlist"><a href="https://www.camzone.lk/WishListSearch.html" title="Wishlist"><i class="fa fa-heart"></i><span class="hidden-xs">Wishlist</span></a></div>
+				
+
+					<!--<div class="blog"><a title="Blog" href="blog.html"><i class="fa fa-rss"></i><span class="hidden-xs">Blog</span></a></div>-->
+
+				<div class="login">
+					
+							<a title="My Account" href="https://www.camzone.lk/acclogin.html?url=AL"><i class="fa fa-unlock-alt"></i><span class="hidden-xs">Login</span></a>
+						
+				</div>
+
+			</div>
+            <!-- End Default Welcome Message -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-xs-6">
+            <!-- Header Logo -->
+            <div class="logo"><a title="Company Logo" href="index.html"><img src="1572935375721.jpg" alt="Company Logo" width="205" height="83"  border="0" /></a> </div>
+            <!-- End Header Logo -->
+
+          </div>
+          <div class="col-xs-9 col-sm-6 col-md-6">
+            <!-- Search -->
+            <div class="top-search">
+              <div id="search">
+
+				<form name = "frmMainsearch" method="post" action ="https://www.camzone.lk/searchresult.html" onSubmit="JavaScript:submitMainsearch();return false">
+					<input type="hidden" name="from">
+					<input type="hidden" name="FrmSearchWords">
+					<input type="hidden" name="hidSearchStringType" value=2>
+
+                	<div class="input-group">
+                		
+                      <input type="text" class="form-control" placeholder="Type keyword" maxlength="35" name="SearchWord">
+                      <button class="btn-search" type="button" onClick="JavaScript:submitMainsearch();return false"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+
+              </div>
+            </div>
+			<div class="item-title" style="margin-top:-6px;margin-left:13px;margin-bottom:5px;">
+               	<a href="https://www.camzone.lk/Powersearch.html?Tp=">Advance search<i class="fa fa-search" style="margin-left:5px;"></i></a>
+			</div>
+            <!-- End Search -->
+          </div>
+          <!-- top cart -->
+
+          <div class="col-lg-3 col-xs-3 top-cart">
+            			<div class="top-cart-contain">
+              <div class="mini-cart">
+					<div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+						<a href="#">
+							<div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
+							<div class="shoppingcart-inner hidden-xs">
+								<span class="cart-title">Shopping Cart</span>
+								<span class="cart-total">0 Item(s): LKR 0.00</span>
+							</div>
+						</a>
+					</div>
+
+					
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+				<!-- end header -->
+
+				<!-- Navbar -->
+					<nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+        <div class="mm-toggle-wrap">
+              <div class="mm-toggle"> <i class="fa fa-align-justify"></i> </div><span class="mm-label">Menu</span>
+            </div>
+          <div class="mega-container visible-lg visible-md visible-sm">
+            <div class="navleft-container">
+              <div class="mega-menu-title">
+                <h3>Categories</h3>
+              </div>
+              <div class="mega-menu-category">
+				
+				<ul class="nav">
+				
+								<li>
+							
+                  				
+								<a href="items.html?Cc=199&Bc=">Battery</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=172&iTpStatus=0&Tp=&Bc=">Battery - CMOS</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=203&iTpStatus=0&Tp=&Bc=">Battery - UPS</a></li>										  
+										  	
+										</ul>
+									  </div>
+									 
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=230&Bc=">Blower</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+					
+								<li>
+							
+                  				
+								<a href="items.html?Cc=209&Bc=">Broadband</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=191&iTpStatus=0&Tp=&Bc=">ADSL Splitter &amp; Splitter Cable</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=211&iTpStatus=0&Tp=&Bc=">ADSL, DSL Router</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=153&iTpStatus=0&Tp=&Bc=">Mobile Broadband</a></li>										  
+										  	
+										</ul>
+									  </div>
+									 
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+					
+								<li>
+							
+                  				
+								<a href="items.html?Cc=15&Bc=">Cables</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=130&iTpStatus=0&Tp=&Bc=">HDD Cables</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=125&iTpStatus=0&Tp=&Bc=">Network Cable</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=249&iTpStatus=0&Tp=&Bc=">Other Cables</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=129&iTpStatus=0&Tp=&Bc=">Parallel &amp; Serial Cables</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=221&iTpStatus=0&Tp=&Bc=">Power Code</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=126&iTpStatus=0&Tp=&Bc=">Telephone Cables</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=127&iTpStatus=0&Tp=&Bc=">USB Cables</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=131&iTpStatus=0&Tp=&Bc=">VGA Cables</a></li>										  
+										  	
+										</ul>
+									  </div>
+									  
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=154&Bc=">Card Reader</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+					
+								<li>
+							
+                  				
+								<a href="items.html?Cc=16&Bc=">Cartridge</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=208&iTpStatus=0&Tp=&Bc=">Brother Cartridge</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=17&iTpStatus=0&Tp=&Bc=">Canon Cartridges</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=229&iTpStatus=0&Tp=&Bc=">Dell Cartridges</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=18&iTpStatus=0&Tp=&Bc=">Epson Cartridges</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=19&iTpStatus=0&Tp=&Bc=">HP Cartridges</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=20&iTpStatus=0&Tp=&Bc=">Lexmark Cartridges</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=22&iTpStatus=0&Tp=&Bc=">Refil Kits</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=21&iTpStatus=0&Tp=&Bc=">Ribbons</a></li>										  
+										  	
+										</ul>
+									  </div>
+									  
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=23&Bc=">Casing</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+					
+								<li>
+							
+                  				
+								<a href="items.html?Cc=11&Bc=">CD'S/DVD'S &amp; CD Pouches</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=12&iTpStatus=0&Tp=&Bc=">Blank CDs</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=13&iTpStatus=0&Tp=&Bc=">Blank DVDs</a></li>										  
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=14&iTpStatus=0&Tp=&Bc=">CD Storage</a></li>										  
+										  	
+										</ul>
+									  </div>
+									  
+									  
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=03&Bc=">Cleaner</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+					
+								<li>
+							
+                  				
+								<a href="items.html?Cc=193&Bc=">Computer</a>
+																						
+								<!-- sub categories -->	
+								
+								<div class="wrap-popup">
+								  <div class="popup">
+									<div class="row">
+									  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<ul class="nav">
+										  
+											<li style="font-size:15px;"><a href="items.html?Cc=38&iTpStatus=0&Tp=&Bc=">Megabox Computers</a></li>										  
+										  	
+										</ul>
+									  </div>
+									  
+									</div>
+								  </div>
+								</div>	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=179&Bc=">Computer Toolkit</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=176&Bc=">Controler Card</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=05&Bc=">Converter</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=171&Bc=">Cooler Fan &amp; Heat sink</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=252&Bc=">Desktop</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+						
+								<li class="nosub">
+							
+                  				
+								<a href="items.html?Cc=105&Bc=">Desktop Monitor</a>
+																						
+								<!-- sub categories -->	
+																
+                  			</li>
+					
+					<li class="nosub">
+						<a href="items.html?CatMoveby=0&cC=&Bc=&Nbm=199&Pbm=105&sCategoryTitle=1&FromNav=True">More...</a>
+					</li>
+					
+				</ul>
+				
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 col-sm-8">
+          <div class="mtmegamenu">
+				<ul>
+					<li class="mt-root demo_custom_link_cms">
+						<div class="mt-root-item">
+							<a href="index.html"><div class="title title_font"><span class="title-text">Home</span></div></a>
+						</div>
+						
+					</li>
+									
+					<li class="mt-root demo_custom_link_cms">
+						<div class="mt-root-item">
+							<a href="product.html"><div class="title title_font"><span class="title-text">Products</span></div></a>
+						</div>				
+					</li>	
+				
+					
+				<!-- brand -->
+
+				
+						<li class="mt-root demo_custom_link_cms">
+							<div class="mt-root-item">
+
+								<a href="AtoZdisplay.html?Type=03&TpData="><div class="title title_font"><span class="title-text">Brands</span></div></a>
+
+							</div>
+							<ul class="menu-items col-md-3 col-sm-4 col-xs-12">
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=11&BrandDesc=3M">3M</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=35&BrandDesc=A4+Tech">A4 Tech</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=85&BrandDesc=Acer">Acer</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=100&BrandDesc=ADATA">ADATA</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=66&BrandDesc=AMD">AMD</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=130&BrandDesc=AOC">AOC</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=27&BrandDesc=ASUS+">ASUS </a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=275&BrandDesc=ASUS%2D+Notebooks">ASUS- Notebooks</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=124&BrandDesc=Belkin">Belkin</a>
+									</div>
+								  </li>
+								
+								  <li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?Bc=37&BrandDesc=Benq">Benq</a>
+									</div>
+								  </li>
+								
+								<li class="menu-item depth-1">
+									<div class="title">
+										<a href="items.html?CatMoveby=0&Bc=&Nbm=11&Pbm=37&sTitle=3">More...</a>
+									</div>
+								</li>
+								
+							</ul>
+						</li>
+					
+
+
+					
+				  <li class="mt-root">
+					<div class="mt-root-item">
+						<a href="contact.html"><div class="title title_font"><span class="title-text">Contact Us</span> </div></a>
+					</div>
+				  </li>
+				  <li class="mt-root" style="margin-right:5px;">
+					<div class="mt-root-item">
+						<a href="about_us.html"><div class="title title_font"><span class="title-text">about us</span></div></a>
+					</div>
+				  </li>
+
+				<!-- Best Seller -->			
+				  <li class="mt-root" style="margin-right:0px;">
+					<div class="mt-root-item" >&nbsp;
+					 
+					</div>				           
+				  </li>
+				</ul>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+				<!-- end nav -->
+
+  <!-- Home Slider Start -->
+    
+		  <div class="slider">
+			<div class="tp-banner-container clearfix">
+			  <div class="tp-banner" >
+				<ul>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/Asus-MX279HR.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+           			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='itemdesc.html?ic=1104-S' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/front.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='items.html?Tp=&iTpStatus=1&Cc=15&CatName=Cables' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/front2.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='items.html?Cc=109' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/front3.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='items.html?Cc=23&iTpStatus=1&Tp=' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/mastercase-pro-6.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='items.html?Tp=&iTpStatus=1&Cc=107&CatName=Operating%20Systems' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				  <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
+					<img src="images/front4.jpg" alt="Slider" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            			<div class="tp-caption lfb ltb start tp-resizeme"
+                          data-x="680"
+                          data-y="390"
+                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                          data-speed="1500"
+                          data-start="1600"
+                          data-easing="Power3.easeInOut"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-elementdelay="0.01"
+                          data-endelementdelay="0.1"
+                          data-linktoslide="next"
+                          style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='https://www.asus.com/microsite/csm/lk/' class='largebtn solid'>Get It Now!</a> </div>					
+				  </li>
+				
+				</ul>
+			  </div>
+			</div>
+		  </div>
+	
+
+  
+ 
+	
+  
+  <!-- main container -->
+  <div class="main-container col1-layout">
+    <div class="container">
+      <div class="row">
+
+        <!-- Home Tabs  -->
+		<form action="https://www.camzone.lk/includes/add_item.html" METHOD="POST" name="frmAdd" onSubmit="return false">
+		
+
+        <div class="col-sm-8 col-md-9 col-xs-12">
+          <div class="home-tab">
+            <ul class="nav home-nav-tabs home-product-tabs">
+            
+            <li class>
+              <a href="#featured" data-toggle="tab" aria-expanded="false">Security Cameras</a></li>
+              <li class="divider"></li>
+              <li class="active">
+              <a href="#top-sellers" data-toggle="tab" aria-expanded="true">DVR's</a> </li>
+            
+            </ul>
+            <div id="productTabContent" class="tab-content">
+              <div class="tab-pane active in" id="featured">
+                <div class="featured-pro">
+                  <div class="slider-items-products">
+                    <div id="featured-slider" class="product-flexslider hidden-buttons">
+                      <div class="slider-items slider-width-col4">
+
+						
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <!--<div class="icon-sale-label sale-left">Sale</div>-->
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-2CE16C0T-IRPF(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4001U&eq=&Tp=">
+											<figure> <img class="first-img" src="images/price.png" alt="">
+											<img class="hover-img" src="images/price.png"  alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","1","4001U","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+											
+												<div class="mt-button quick-view"> <a href="quick_view.html?Ic=4001U"> <i class="fa fa-search"></i> </a> </div>
+											
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-2CE16C0T-IRPF(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4001U&eq=&Tp=">DS-2CE16C0T-IRPF(HD720p)</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 2,775.00&nbsp;per&nbsp;/Each
+							</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+														
+														<label for="qty">Qty.:</label>
+														<input type="Text" name="qty1" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","1","4001U","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <!--<div class="icon-sale-label sale-left">Sale</div>-->
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-2CE56C0T-IRPF(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4575%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/DS-2CE56C0T-IRPF-Side.png" alt="">
+											<img class="hover-img" src="images/DS-2CE56C0T-IRPF-Side.png" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","2","4575-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+											
+												<div class="mt-button quick-view"> <a href="quick_view.html?Ic=4575-S"> <i class="fa fa-search"></i> </a> </div>
+											
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-2CE56C0T-IRPF(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4575%2DS&eq=&Tp=">DS-2CE56C0T-IRPF(HD720p)</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 2,436.00&nbsp;per&nbsp;/Each
+							</span> </span>
+												
+															<p class="availability out-of-stock pull-center">Availability: <span>No</span></p>
+														
+													<p style="height:50px;">
+													
+														
+														<label for="qty">Qty.:</label>
+														<input type="Text" name="qty2" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Pre Order" type="button" onclick='javascript:preproc("frmAdd","2","4575-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Pre Order</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <!--<div class="icon-sale-label sale-left">Sale</div>-->
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-2CE16C8T-IW3Z(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4584%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/HLC.webp" alt="">
+											<img class="hover-img" src="images/HLC.webp" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","3","4584-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+											
+												<div class="mt-button quick-view"> <a href="quick_view.html?Ic=4584-S"> <i class="fa fa-search"></i> </a> </div>
+											
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-2CE16C8T-IW3Z(HD720p)" href="https://www.camzone.lk/itemdesc.html?ic=4584%2DS&eq=&Tp=">DS-2CE16C8T-IW3Z(HD720p)</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 16,840.00&nbsp;per&nbsp;/Each
+							</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+														
+														<label for="qty">Qty.:</label>
+														<input type="Text" name="qty3" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","3","4584-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+			<div class="tab-pane fade" id="top-sellers">
+                <div class="top-sellers-pro">
+                  <div class="slider-items-products">
+                    <div id="top-sellers-slider" class="product-flexslider hidden-buttons">
+                      <div class="slider-items slider-width-col4 ">						
+						<!-- Gaming -->
+						
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <!--<div class="icon-sale-label sale-left">Sale</div>-->
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-7108GH1-F1/N 8CH" href="https://www.camzone.lk/itemdesc.html?ic=1052%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/61+yAvT8KtL._SY355_.jpg" alt="">
+											<img class="hover-img" src="images/61+yAvT8KtL._SY355_.jpg" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","4","1052-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+										  <div class="mt-button quick-view"> <a href="quick_view.html?Ic=1052-S"> <i class="fa fa-search"></i> </a> </div>
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-7108GH1-F1/N 8CH" href="https://www.camzone.lk/itemdesc.html?ic=1052%2DS&eq=&Tp=">DS-7108GH1-F1/N 8CH</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 11,700.00&nbsp;per&nbsp;/Each
+												</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+
+															<label for="qty">Qty.:</label>
+															<input type="Text" name="qty4" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","4","1052-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <!--<div class="icon-sale-label sale-left">Sale</div>-->
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-7204GH1-F1(4CH)" href="https://www.camzone.lk/itemdesc.html?ic=1051%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/4CH.jpg" alt="">
+											<img class="hover-img" src="images/4CH.jpg" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","5","1051-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+										  <div class="mt-button quick-view"> <a href="quick_view.html?Ic=1051-S"> <i class="fa fa-search"></i> </a> </div>
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-7204GH1-F1(4CH)" href="https://www.camzone.lk/itemdesc.html?ic=1051%2DS&eq=&Tp=">DS-7204GH1-F1(4CH)</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 12,450.00&nbsp;per&nbsp;/Each
+												</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+
+															<label for="qty">Qty.:</label>
+															<input type="Text" name="qty5" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","5","1051-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="DS-7332HQHI-K4(32CH)" href="https://www.camzone.lk/itemdesc.html?ic=1292%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/DS-7332HQHI-K4_hikvision-hdtvi-1-600x600.jpg" alt="">
+											<img class="hover-img" src="images/DS-7332HQHI-K4_hikvision-hdtvi-1-600x600.jpg" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","6","1292-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+										  <div class="mt-button quick-view"> <a href="quick_view.html?Ic=1292-S"> <i class="fa fa-search"></i> </a> </div>
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="DS-7332HQHI-K4(32CH)" href="https://www.camzone.lk/itemdesc.html?ic=1292%2DS&eq=&Tp=">DS-7332HQHI-K4(32CH)</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 136,890.00&nbsp;per&nbsp;/Each
+												</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+
+															<label for="qty">Qty.:</label>
+															<input type="Text" name="qty6" value="1" size="4" maxlength="8" class="content">
+														
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","6","1292-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								
+
+
+
+
+
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--Hot deal -->
+		
+        <div class="col-md-3 col-sm-4 col-xs-12 hot-products">
+          <div class="hot-deal"> <span class="title-text">Hot deal</span>
+            <ul class="products-grid">
+              <li class="item">
+                <div class="product-item">
+                  <div class="item-inner">
+
+					
+
+								<div class="product-item">
+								  <div class="item-inner">
+									<div class="product-thumbnail">
+									  <div class="icon-sale-label sale-left">Hot</div>
+									  <!--<div class="icon-new-label new-right">New</div>-->
+									  <div class="pr-img-area" style="height:257px !important;">
+									  	<a title="HP 15-da0004TU i3/4G/1TB/Win10 Laptop(1Y" href="https://www.camzone.lk/itemdesc.html?ic=4020%2DS&eq=&Tp=">
+											<figure> <img class="first-img" src="images/co.jpg" alt="">
+											<img class="hover-img" src="images/co.jpg" alt=""></figure>
+										</a>
+										<!--<button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>-->
+									  </div>
+									  <div class="pr-info-area">
+										<div class="pr-button">
+											
+														<div class="mt-button add_to_wishlist"> <a href='javascript:preproc("frmAdd","7","4020-S","0","","1","")'> <i class="fa fa-heart"></i> </a> </div>
+													
+										  <!--<div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>-->
+										  <div class="mt-button quick-view"> <a href="quick_view.html?Ic=4020-S"> <i class="fa fa-search"></i> </a> </div>
+										</div>
+									  </div>
+									</div>
+									<div class="item-info">
+									  <div class="info-inner">
+										<div class="item-title"> <a title="HP 15-da0004TU i3/4G/1TB/Win10 Laptop(1Y" href="https://www.camzone.lk/itemdesc.html?ic=4020%2DS&eq=&Tp=">HP 15-da0004TU i3/4G/1TB/Win10 Laptop(1Y</a></div>
+										<div class="item-content">
+										  <!--<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>-->
+
+										  <div class="item-price">
+										  <div class="price-box">
+												<span class="regular-price"> <span class="price">
+												LKR 67,650.00&nbsp;per&nbsp;/Each
+												</span> </span>
+												
+															<p class="availability in-stock pull-center">Availability: <span>Yes</span></p>
+														
+													<p style="height:50px;">
+													
+															<label for="qty">Qty.:</label>
+															<input type="Text" name="qty7" value="1" size="4" maxlength="8" class="content">
+															<button class="button" style="float:center !important;"  title="Add to Cart" type="button" onclick='javascript:preproc("frmAdd","7","4020-S","0","","0","1")'>
+																<span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+															</button>
+														
+													</p>
+												
+										  </div>
+										  </div>
+
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+							
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end main container -->
+
+  <!-- top banner -->
+	
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12">
+        <div class="jtv-banner-box banner-inner">
+
+			
+			  <div class="image">
+				<a class="jtv-banner-opacity" href="0008-converted.pdf" style="background-color:lightpink;">
+					<img src="images/dvr.png" alt="">
+				</a>
+			  </div>
+			  <div class="jtv-content-text">
+				<h3 class="title">DVR Price list</h3>
+				<span class="sub-title">Click here to download !</span>
+                <a href="0008-converted.pdf" class="button">Buy Now</a>
+			  </div>
+			
+        </div>
+      </div>
+
+      <div class="col-sm-5 col-xs-12">
+      		
+				<div class="jtv-banner-box">
+				<div class="image"><a class="jtv-banner-opacity" href="0001-converted.pdf" style="background-color:skyblue;"> <img src="images/cc.jpg" alt=""> </a></div>
+		  <div class="jtv-content-text">
+					<h3 class="title">Camera Price List</h3>
+					<span class="sub-title">Click here to download !</span> <a href="0001-converted.pdf" class="button">Buy Now</a>
+				</div>
+				</div>
+            
+      </div>
+      <div class="col-sm-3 col-xs-12">
+        <div class="jtv-banner-box banner-inner">
+          <div class="image"> <a class="jtv-banner-opacity" href="0001.jpg" target="_blank" style="background-color:#fdc101;"><img src="images/2.png" alt="Laptop Price list"></a> </div>
+          <div class="jtv-content-text">
+            <h3 class="title">LAPTOP PRICE LIST</h3>
+          </div>
+        </div>
+        <div class="jtv-banner-box banner-inner">
+          <div class="image "> <a class="jtv-banner-opacity" href="http://shop.camzone.lk/mmbc/docs/computer-price-list.pdf" target="_blank" style="background-color:#61b375;"><img src="images/1.png" alt="Desktop Price list"></a> </div>
+          <div class="jtv-content-text">
+            <h3 class="title">DESKTOP PRICE LIST</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="bottom-banner-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4"> <a href="items.html?Tp=&iTpStatus=1&Cc=106&CatName=Softwares" class="bottom-banner-img"><img src="images/pkg.jpg" alt="bottom banner"> <span class="banner-overly"></span>
+          <div class="bottom-img-info">
+            <h3>Packages</h3>
+           
+            <span class="shop-now-btn">Details</span> </div>
+          </a> </div>
+        <div class="col-md-8 col-sm-8"> <a href="featured.html?FSCat=15&url=IND&iFromFeatured=1" class="bottom-banner-img last"><img src="images/arr.jpg" alt="bottom banner"> <span class="banner-overly last"></span>
+          <div class="bottom-img-info last">
+            <h3>New Arrivals</h3>
+            <span class="shop-now-btn">Details</span>
+            
+            
+          </a> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- category area start -->
+  <div class="jtv-category-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+
+			
+
+			  <div class="jtv-single-cat">
+				<h2 class="cat-title">Cheapest</h2>
+
+				
+					<div class="jtv-product">
+					  <div class="product-img"> <a href="https://www.camzone.lk/itemdesc.html?ic=44819&eq=&Tp=">
+						  <img src="images/cheap.jpg" alt="">
+					  	<img class="secondary-img" src="images/cheap.jpg" alt=""> </a> </div>
+					  <div class="jtv-product-content">
+						<h3><a href="https://www.camzone.lk/itemdesc.html?ic=44819&eq=&Tp=">DS-2CE16C0T-IRPF HD 720p Camera</a></h3>
+						<div class="price-box">
+								
+											<p class="special-price"> LKR 2,775.00&nbsp;per&nbsp;/Each</p>
+										
+						</div>
+						<div class="jtv-product-action">
+							<div class="jtv-extra-link">
+								<!--<div class="button-cart">
+								  <a href="https://www.camzone.lk/itemdesc.html?ic=44819&eq=&Tp=" title="more info"><i class="fa fa-shopping-cart"></i></a>
+								</div>-->
+								<a href="quick_view.html?Ic=44819" ><i class="fa fa-search"></i></a>
+								<!--<a href="#"><i class="fa fa-heart"></i></a>-->
+							</div>
+						</div>
+					  </div>
+					</div>
+				
+
+					<div class="jtv-product jtv-cat-margin">
+	<div class="product-img"> <a href="https://www.camzone.lk/itemdesc.html?ic=45104&eq=&Tp="> <img src="images/61+yAvT8KtL._SY355_.jpg" alt="">
+					  <img class="secondary-img" src="images/61+yAvT8KtL._SY355_.jpg" alt=""> </a> </div>
+					  <div class="jtv-product-content">
+						<h3><a href="https://www.camzone.lk/itemdesc.html?ic=45104&eq=&Tp=">DS-7104HGHI-F1 (4CH)</a></h3>
+						<div class="price-box">
+								
+											<p class="special-price"> LKR 8,000.00&nbsp;per&nbsp;/Each</p>
+										
+						</div>
+						<div class="jtv-product-action">
+						  <div class="jtv-extra-link">
+								<!--<div class="button-cart">
+								  <a href="https://www.camzone.lk/itemdesc.html?ic=45104&eq=&Tp=" title="more info"><i class="fa fa-shopping-cart"></i></a>
+								</div>-->
+								<a href="quick_view.html?Ic=45104" ><i class="fa fa-search"></i></a>
+								<!--<a href="#"><i class="fa fa-heart"></i></a>-->
+							</div>
+						</div>
+					  </div>
+					</div>
+					
+			  </div>
+            
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+
+			
+
+				  <div class="jtv-single-cat">
+					<h2 class="cat-title">Top Selling</h2>
+
+					
+						<div class="jtv-product">
+						  <div class="product-img"> <a href="https://www.camzone.lk/itemdesc.html?ic=43550&eq=&Tp="> <img src="images/top.jpg" alt=""> <img class="secondary-img" src="images/top.jpg" alt=""> </a> </div>
+						  <div class="jtv-product-content">
+							<h3><a href="https://www.camzone.lk/itemdesc.html?ic=43550&eq=&Tp=">DS-2CE16D0T-IP/ECO HD1080p</a></h3>
+							<div class="price-box">
+								
+											<p class="special-price"> LKR 3,360.00&nbsp;per&nbsp;/Each</p>
+										
+							</div>
+							<div class="jtv-product-action">
+							  <div class="jtv-extra-link">
+									<!--<div class="button-cart">
+									  <a href="https://www.camzone.lk/itemdesc.html?ic=43550&eq=&Tp=" title="more info"><i class="fa fa-shopping-cart"></i></a>
+									</div>-->
+									<a href="quick_view.html?Ic=43550" ><i class="fa fa-search"></i></a>
+									<!--<a href="#"><i class="fa fa-heart"></i></a>-->
+								</div>
+							</div>
+						  </div>
+						</div>
+					
+
+						<div class="jtv-product jtv-cat-margin">
+						  <div class="product-img"> <a href="https://www.camzone.lk/itemdesc.html?ic=42555&eq=&Tp="> <img src="images/lpr.jpg" alt=""> <img class="secondary-img" src="images/lpr.jpg" alt=""> </a> </div>
+						  <div class="jtv-product-content">
+							<h3><a href="https://www.camzone.lk/itemdesc.html?ic=42555&eq=&Tp=">DS-2CE16C8T-IW3Z (HLC License Plate Bullet)</a></h3>
+							<div class="price-box">
+								
+											<p class="special-price"> LKR 16,900.00&nbsp;per&nbsp;/Each</p>
+										
+
+							</div>
+							<div class="jtv-product-action">
+							  <div class="jtv-extra-link">
+								<!--<div class="button-cart">
+								  <a href="https://www.camzone.lk/itemdesc.html?ic=42555&eq=&Tp=" title="more info"><i class="fa fa-shopping-cart"></i></a>
+								</div>-->
+								<a href="quick_view.html?Ic=42555" ><i class="fa fa-search"></i></a>
+								<!--<a href="#"><i class="fa fa-heart"></i></a>-->
+								</div>
+							</div>
+						  </div>
+						</div>
+						
+
+						<div class="jtv-product jtv-cat-margin">
+						  <div class="product-img"> <a href="https://www.camzone.lk/itemdesc.html?ic=42302&eq=&Tp="> <img src="images/eyeball.webp" alt=""> <img class="secondary-img" src="images/eyeball.webp" alt=""> </a> </div>
+						  <div class="jtv-product-content">
+							<h3><a href="https://www.camzone.lk/itemdesc.html?ic=42302&eq=&Tp=">DS-2CE56D0T-IRPF HD1080p eye ball</a></h3>
+							<div class="price-box">
+								
+											<p class="special-price"> LKR 3,800.00&nbsp;per&nbsp;/Each</p>
+										
+
+							</div>
+							<div class="jtv-product-action">
+							  <div class="jtv-extra-link">
+								<!--<div class="button-cart">
+								  <a href="https://www.camzone.lk/itemdesc.html?ic=42302&eq=&Tp=" title="more info"><i class="fa fa-shopping-cart"></i></a>
+								</div>-->
+								<a href="quick_view.html?Ic=42302" ><i class="fa fa-search"></i></a>
+								<!--<a href="#"><i class="fa fa-heart"></i></a>-->
+								</div>
+							</div>
+						  </div>
+						</div>
+						
+				  </div>
+            
+        </div>
+		</form>
+		<form action="https://www.camzone.lk/includes/add_item.html" METHOD="POST" name="frmAdditem">
+		 <input type="hidden" name="qty" value="1">
+		 <input type="hidden" name="ic">
+		 <input type="hidden" name="type">
+		 <input type="hidden" name="EqCode">
+		</form>
+
+        <!-- service area start -->
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <div class="jtv-service-area">
+
+            <!-- jtv-single-service start -->
+
+            <div class="jtv-single-service">
+              <div class="service-icon"> <img alt="" src="images/install.jpg" style="height:75px;"> </div>
+              <div class="service-text">
+                <h2>CCTV Installations</h2>
+                <!--<p><span>Call us 24/7 at 000 - 123 - 456</span></p>-->
+              </div>
+            </div>
+            <div class="jtv-single-service">
+              <div class="service-icon"> <img alt="" src="images/maintain.png" style="height:75px;"> </div>
+              <div class="service-text">
+                <h2>Mainteinance After Installation</h2>
+                <!--<p><span>On order over $199 - 7 days a week</span></p>-->
+              </div>
+            </div>
+            <div class="jtv-single-service">
+              <div class="service-icon"> <img alt="" src="images/equipments.png" style="height:75px;"> </div>
+              <div class="service-text">
+                <h2>CCTV Equipments</h2>
+                <!--<p><span>Send within 30 days</span></p>-->
+              </div>
+            </div>
+
+            <!-- jtv-single-service end -->
+
+          </div>
+        </div>
+      </div>
+</div>
+  </div>
+ 
+</div>
+
+
+    <footer>
+	
+	
+    <div class="footer-newsletter" style="margin-top:15px;">
+      <div class="container">
+        <div class="row">
+        
+          <div class="social col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <ul class="inline-mode">
+              <li class="social-network fb"><a title="Connect us on Facebook" target="_blank" href="https://www.facebook.com/camzonecomputers"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-network googleplus"><a title="Connect us on Google+" target="_blank" href="https://plus.google.com/b/104595609646826225728/104595609646826225728"><i class="fa fa-google-plus"></i></a></li>
+              <li class="social-network tw"><a title="Connect us on Twitter" target="_blank" href="https://twitter.com/camzonelk"><i class="fa fa-twitter"></i></a></li>
+              <li class="social-network linkedin"><a title="Connect us on Linkedin" target="_blank" href="https://www.linkedin.com/company/camzone-computers"><i class="fa fa-linkedin"></i></a></li>
+              <li class="social-network rss"><a title="Connect us" target="_blank" href="http://www.camzone.lk"><i class="fa fa-rss"></i></a></li>
+              <li class="social-network instagram"><a title="Connect us on Instagram" target="_blank" href="https://www.instagram.com/camzonecomputers"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-xs-12 col-lg-3">
+          <div class="footer-logo"><a title="Company Logo" href="index.html"><img src="1572935375721.jpg"  border="0" alt="Company Logo" /></a>
+          	
+          </div>
+
+       
+          <div class="footer-content">
+            <div class="email"> <i class="fa fa-envelope"></i>
+              <p>websales@camzone.lk</p>
+            </div>
+            <div class="phone"> <i class="fa fa-phone"></i>
+              <p>+0117510510 (Sales)</p>
+            </div>
+            <div class="phone"> <i class="fa fa-phone"></i>
+              <p>+0117510513 (Technical Support)</p>
+            </div>
+            <div class="address"> <i class="fa fa-map-marker"></i>
+              <p> camzone Computers (PVT) Ltd., Galle Rd, Matara, Sri Lanka</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
+          <div class="footer-links">
+            <h3 class="links-title">Information<a class="expander visible-xs" href="#TabBlock-1">+</a></h3>
+            <div class="tabBlock" id="TabBlock-1">
+
+              <ul class="list-links list-unstyled">
+                <li><a href="help.html?url=HL">Delivery Information</a></li>
+                <li><a href="help.html?url=HL#Pricing">Discount</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="help.html?url=HL">Privacy Policy</a></li>
+                <li><a href="help.html?url=HL">FAQs</a></li>
+                <li><a href="help.html?url=HL">Terms &amp; Condition</a></li>
+              </ul>
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
+          <div class="footer-links">
+            <h3 class="links-title">Insider<a class="expander visible-xs" href="#TabBlock-3">+</a></h3>
+            <div class="tabBlock" id="TabBlock-3">
+              <ul class="list-links list-unstyled">
+                <li> <a href="index.html"> Home </a> </li>
+                <!--
+                <li> <a href="#">News</a> </li>
+                <li> <a href="#">Trends</a> </li>
+                -->
+                <li> <a href="about_us.html">About Us</a> </li>
+                <li> <a href="contact.html">Contact Us</a> </li>
+               
+				
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-2 col-xs-12 col-lg-3 collapsed-block">
+          <div class="footer-links">
+            <h3 class="links-title">Service<a class="expander visible-xs" href="#TabBlock-4">+</a></h3>
+            <div class="tabBlock" id="TabBlock-4">
+              <ul class="list-links list-unstyled">
+
+                <li> <a href="0001-converted.pdf" target="_blank">Camera Price List</a> </li>
+                <li> <a href="index.html">Request a quote</a> </li>
+                <li> <a href="http://webmaster.camzone.lk/payonline/" target="_blank">Request an installation</a> </li>
+                <li> <a href="http://shop.camzone.lk/bc/zipcodes/zip-codes.html" target="_blank">Request a maintenance</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-coppyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12 coppyright">
+          	&copy;camzone Computers (PVT) Ltd., All rights reserved.
+			
+				Mail us at:<a href="mailto:websales@camzone.lk" class=footer>websales@camzone.lk</a>
+			
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="payment">
+              <ul>
+                <li><a href="#"><img title="Visa" alt="Visa" src="images/visa.png"></a></li>
+                <!--<li><a href="#"><img title="Paypal" alt="Paypal" src="images/paypal.png"></a></li>-->
+                <!--<li><a href="#"><img title="Discover" alt="Discover" src="images/discover.png"></a></li>-->
+                <li><a href="#"><img title="Master Card" alt="Master Card" src="images/master-card.png"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="totop"> </a> </div>
+
+	<!-- live chat files -->
+
+<script type="text/javascript">
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="file:///E|/Backup/Desktop/Blur.css" rel="stylesheet" type="text/css">
+<body onLoad="MM_preloadImages('/mmbc/Images/lap_up1.gif','/mmbc/Images/backto_home_1.gif','/mmbc/Images/backto_home_1.png','/mmbc/Images/up_1.gif','/mmbc/banners/a4tech.png')">
+	<!-- End Footer -->
+
+	<!-- JS -->
+			<!-- jquery js -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<!-- bootstrap js -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- owl.carousel.min js -->
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+	<!-- bxslider js -->
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
+
+	
+		<!-- Slider Js -->
+		<script type="text/javascript" src="js/revolution-slider.js"></script>
+	
+
+	<!-- megamenu js -->
+	<script type="text/javascript" src="js/megamenu.js"></script>
+	<script type="text/javascript">
+			/* <![CDATA[ */
+			var mega_menu = '0';
+
+			/* ]]> */
+			</script>
+
+	<!-- jquery.mobile-menu js -->
+	<script type="text/javascript" src="js/mobile-menu.js"></script>
+
+	<!--jquery-ui.min js -->
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+	<!-- main js -->
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+	<!-- End JS -->
+
+
+	<!-- EOGLOBAS JS -->
+			<script language="JavaScript" src="includes/EOStrings.js"></script>
+	
+<script language="JavaScript">
+	//***	This function will be called in every page to set the title atttibute for images
+	function setTitleForImages()
+	{		
+		var strUserAgent = navigator.userAgent.toUpperCase();		
+		if((strUserAgent.indexOf("NETSCAPE")>=0) || (strUserAgent.indexOf("OPERA")>=0) || (strUserAgent.indexOf("MAC") >= 0) || (strUserAgent.indexOf("GECKO") >= 0))
+		{
+			for(var intImageIndex=0;intImageIndex<document.images.length;intImageIndex++)
+			{		
+				document.images[intImageIndex].title = document.images[intImageIndex].alt;
+			}
+		}
+	}
+
+	
+	//*** This function will be called in footer.html page,customstatement.html,shipcalculator.html for mac sumbit key compatability.
+	function setHrefForLinks()
+	{
+		for(var intLinkIndex=0;intLinkIndex<document.links.length;intLinkIndex++)
+		{		
+			if(document.links[intLinkIndex].onclick != null)
+			{						
+				var strTemp = document.links[intLinkIndex].onclick + "";	
+				strTemp = strTemp.replace("function onclick()","");
+				strTemp = strTemp.replace("{","");	
+				var pos = strTemp.lastIndexOf("}");
+				strTemp = strTemp.substring(0,pos);			
+				strTemp = strTemp.replace("return false;","");
+				strTemp = strTemp.replace("return false","");								
+				if(strTemp.toUpperCase().indexOf("JAVASCRIPT:")==-1) strTemp = "JavaScript:"+strTemp;
+				document.links[intLinkIndex].href = strTemp;					
+			}			
+		}
+	}
+</script>
+
+
+
+
+
+	<!-- End JS -->
+
+
+	<!-- countdown js -->
+	<script type="text/javascript" src="js/countdown.js"></script>
+
+	<!-- Revolution Slider -->
+	<script type="text/javascript">
+			  jQuery(document).ready(function() {
+					 jQuery('.tp-banner').revolution(
+					  {
+						  delay:9000,
+						  startwidth:1170,
+						  startheight:530,
+						  hideThumbs:10,
+
+						  navigationType:"bullet",
+						  navigationStyle:"preview1",
+
+						  hideArrowsOnMobile:"on",
+
+						  touchenabled:"on",
+						  onHoverStop:"on",
+						  spinner:"spinner4"
+					  });
+			  });
+	</script>
+	<!--cloud-zoom js -->
+	<script type="text/javascript" src="js/cloud-zoom.js"></script>
+	<!-- Hot Deals Timer 1-->
+	<script type="text/javascript">
+		  var dthen1 = new Date("12/25/16 11:59:00 PM");
+		  start = "08/04/15 03:02:11 AM";
+		  start_date = Date.parse(start);
+		  var dnow1 = new Date(start_date);
+		  if(CountStepper>0)
+			  ddiff= new Date((dnow1)-(dthen1));
+		  else
+			  ddiff = new Date((dthen1)-(dnow1));
+		  gsecs1 = Math.floor(ddiff.valueOf()/1000);
+
+		  var iid1 = "countbox_1";
+		  CountBack_slider(gsecs1,"countbox_1", 1);
+	  </script>
+
+
+		  
+</body>
+</html>
